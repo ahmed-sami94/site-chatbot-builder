@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adaptive Local Chatbot Demo</title>
+  <link rel="stylesheet" href="assets/css/chatbot.css">
+  <style>
+    body { margin: 0; font-family: Arial, Tahoma, sans-serif; background: #f5f7fb; color: #1f2937; }
+    main { max-width: 960px; margin: 0 auto; padding: 48px 20px; }
+    .demo-panel { background: #fff; border: 1px solid #dbe3ef; border-radius: 12px; padding: 24px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="demo-panel">
+      <h1>Adaptive Local Chatbot</h1>
+      <p>مساعد محلي آمن للمواقع وأنظمة ERP والتقارير، يعمل بدون API tokens خارجية.</p>
+      <div id="adaptiveLocalChatbot"></div>
+    </section>
+  </main>
+  <script src="assets/js/chatbot.js"></script>
+  <script>
+    AdaptiveLocalChatbot.mount("#adaptiveLocalChatbot", {
+      endpoint: "api/chat.php",
+      language: "ar",
+      context_type: "demo",
+      context_title: "Demo page"
+    });
+  </script>
+</body>
+</html>
